@@ -1,0 +1,255 @@
+/* Styling the account container */
+.account-container {
+    background-color: #CCCCCC;
+    opacity: 0.75;
+    width: 30%;
+    height: fit-content;
+    max-width: 700vw;
+    margin: 0 auto 120px auto;
+    border-radius: 4px;
+    padding-bottom: 16px;
+    box-shadow: 0 6px 12px rgba(116, 39, 3, 0.9);
+}
+
+/* Style the form class */
+.form-ctr {
+    width: 100%;
+    padding: 4px;
+}
+
+/* Style the field of the form */
+.field {
+    color: #A52A2A;
+    font-size: 16px;
+    padding: 0 20px 8px 20px;
+}
+
+/* Style the password container of th form */
+.password-container {
+    position: relative;
+}
+
+/* Style the togggle icon */
+.toggle-password {
+    position: absolute;
+    right: 22px;
+    top: 63%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Style the submit div of the form */
+.submit-field {
+    text-align: right;
+    margin: 16px 16px 16px 0;
+}
+
+/* Style the cancel of div */
+.cancel {
+    background-color: #A52A2A;
+    border-radius: 4px;
+    color: #CCCCCC;
+    width: fit-content;
+    padding: 10px 10px;
+    cursor: pointer;
+    float: left;
+    margin-left: 32px;
+    text-decoration: none;
+
+}
+
+/* Cancel on hover */
+.cancel:hover {
+    background-color: #272727;
+}
+
+/*Style the submit-field */
+.submit-text {
+    margin-right: 30%;
+    font-size: 18px;
+}
+
+/* Style the submit button of the form */
+.submit-btn {
+    background-color: #A52A2A;
+    border-radius: 4px;
+    color: #CCCCCC;
+    width: fit-content;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the color when hovering */
+.submit-btn:hover {
+    background-color: #272727;
+}
+
+/* Style the alert div of the flash message */
+.alert {
+    padding: 10px;
+    border: 1px solid #272727;
+    border-radius: 4px;
+    background-color: #A52A2A;
+    opacity: 1;
+    color: #CCCCCC;
+}
+
+/* Style the alert close btn */
+.close-btn {
+    float:right;
+    font-weight: bolder;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style the msg of the alert field */
+.alert-error {
+    background-color: #A52A2A;
+    border-color: #ebccd1;
+}
+
+/* Style todo container */
+.todo-container {
+    background-color: #CCCCCC;
+    opacity: 0.75;
+    width: 30%;
+    height: fit-content;
+    max-width: 700vw;
+    margin: 0 auto 8px auto;
+    border-radius: 4px;
+    padding: 16px 0;
+    text-align: center;
+    color: #A52A2A;
+    box-shadow: 0 6px 12px rgba(116, 39, 3, 0.9);
+}
+
+/* Style flash container */
+.flash-container {
+    opacity: 0.75;
+    width: 30%;
+    height: fit-content;
+    max-width: 700vw;
+    margin: 120px auto 8px auto;
+    border-radius: 4px;
+    text-align: center;
+    color: #CCCCCC;
+}
+
+/* Style the link inside the span */
+.span-a {
+    color: #A52A2A;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+/* Style the user dashboard container */
+.dashboard-container {
+    background-color: #CCCCCC;
+    opacity: 0.75;
+    width: fit-content;
+    height: fit-content;
+    max-width: 700vw;
+    margin: 0 auto 120px auto;
+    border-radius: 4px;
+    padding-bottom: 16px;
+    box-shadow: 0 6px 12px rgba(116, 39, 3, 0.9);
+}
+
+/* Stle the dashboard task list container */
+.task-list {
+    align-items: center;
+}
+
+/* Style the display of the list */
+.task-list ul {
+    list-style-type: none;
+    padding-top: 8px;
+    margin: 10px 20px 20px 20px;
+    width: fit-content;
+    font-size: 20px;
+}
+
+/* Style the display what the list contain */
+.task-list ul li {
+    display: flex;
+    gap: 8px;
+}
+
+/* Style the input element inside the li */
+.task-list input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Style the label status on click */
+.task-list label.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Style the pending or completed status */
+.status {
+    color: #A52A2A;
+    float: right;
+    margin-left: 15px;
+}
+
+/* Style the Add_task and Logout btn container*/
+.crud-btn {
+    display: flex;
+    gap: 16px;
+    justify-content: end;
+    justify-items:
+}
+
+/* Style the last btn of crud_btn */
+.crud-btn:last-child {
+    margin-right: 20px;
+}
+
+/* Style the link in crud_btn */
+.crud-btn button a {
+    text-decoration: none;
+    color: #CCCCCC;
+}
+
+/* Style button elem */
+button {
+    background-color: #A52A2A;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+}
+
+/*style hover color of th button elem */
+button:hover {
+    background-color: #272727;
+}
+
+/* Style the display user name */
+.user-name {
+    text-align: center;
+    color: #272727;
+    padding-top:8px;
+}
+
+/* Style the icon */
+.material-symbols-outlined {
+    background-color: none;
+    border: none;
+    color: #A52A2A;
+    size: 8px;
+}
+
+/* Style the inline-btn of the CRUD */
+.btn {
+    background-color: #CCCCCC;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the hovering color of the btn */
+.btn:hover {
+    background-color: #FFFFFF;
+}

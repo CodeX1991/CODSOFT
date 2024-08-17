@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/create_account.css') }}">
+{% block title %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="flash-container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                    <span class="close-btn">&times;</span>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+<div class="todo-container">
+    <h1>Todo-list App</h1>
+</div>
+<div class="account-container">
+    <form method="POST" action="{{ url_for('auth.create_account')}}">
+        {{ form.hidden_tag() }}
+        <h4 style="text-align: center;">Create account</h4>
+        <div class="field">
+            {{ form.firstname.label }}<br>
+            {{ form.firstname(class="form-ctr") }}
+        </div>
+        <div class="field">
+            {{ form.lastname.label }}<br>
+            {{ form.lastname(class="form-ctr") }}
+        </div>
+        <div class="field">
+            {{ form.email.label }}<br>
+            {{ form.email(class="form-ctr") }}
+        </div>
+        <div class="field password-container">
+            {{ form.password.label }}<br>
+            {{ form.password(class="form-ctr", id="password") }}
+            <i class="fa fa-eye toggle-password" id="togglePassword"></i>
+        </div>
+        <div class="field password-container">
+            {{ form.confirm_password.label }}<br>
+            {{ form.confirm_password(class="form-ctr", id="confirm_password") }}
+            <i class="fa fa-eye toggle-password" id="toggleConfirmPassword"></i>
+        </div>
+        <div class="submit-field">
+            <span class="submit-text">Already Have Account <a href="{{ url_for('auth.login') }}" class="span-a">login</a></span>
+            {{ form.submit(class="submit-btn") }}
+        </div>
+    </form>
+</div>
+{% endblock %}

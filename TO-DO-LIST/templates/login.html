@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/create_account.css') }}">
+{% block title %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="flash-container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                    <span class="close-btn">&times;</span>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+<div class="todo-container">
+    <h1>Todo-list App</h1>
+</div>
+<div class="account-container">
+    <form method="POST" action="{{ url_for('auth.login')}}">
+        {{ form.hidden_tag() }}
+        <h4 style="text-align: center;">Sign in</h4>
+        <div class="field">
+            {{ form.email.label }}<br>
+            {{ form.email(class="form-ctr") }}
+        </div>
+        <div class="field password-container">
+            {{ form.password.label }}<br>
+            {{ form.password(class="form-ctr") }}
+        </div>
+        <div class="submit-field">
+            <span class="submit-text">Don't Have Account <a href="{{ url_for('auth.create_account') }}" class="span-a">Register</a></span>
+            {{ form.submit(class="submit-btn") }}
+        </div>
+    </form>
+</div>
+
+{% endblock %}
