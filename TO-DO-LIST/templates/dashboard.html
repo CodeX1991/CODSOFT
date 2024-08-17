@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/create_account.css') }}">
+{% block title %}{% endblock %}
+{% endblock %}
+
+{% block content %}
+<div class="flash-container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                    <span class="close-btn">&times;</span>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+<div class="todo-container">
+    <h1>Todo-list App</h1>
+</div>
+<div class="dashboard-container">
+    <div class="task-list">
+        <h2 class="user-name">Welcome back {{ user.firstname }} {{ user.lastname }}</h2><br>
+        <h3 style="margin-left: 16px;">Your Todo list:</h3>
+        {% if todos %}
+            <ul>
+                {% for todo in todos %}
+                    <li>
+                        <form method="POST" action="{{ url_for('auth.complete_task', task_id=todo.id) }}">
+                            {{ form.hidden_tag() }}
+                            <input type="checkbox" name="completed" onchange="this.form.submit()" {% if todo.completed %}checked{% endif %}>
+                            <label class="{% if todo.completed %}completed{% else %}pending{% endif %}">
+                                {{ todo.task }}
+                            </label>
+                            {% if todo.completed %}
+                                <span class="status">completed</span>
+                            {% else %}
+                                <span class="status">pending</span>
+                            {% endif %}
+                        </form>
+                        <form method="GET" action="{{ url_for('auth.update', task_id=todo.id) }}">
+                            <button type="submit" class="btn">
+                                <span class="material-symbols-outlined">edit_note</span>
+                            </button>
+                        </form>
+                        <form method="POST" action="{{ url_for('auth.delete_task', task_id=todo.id) }}">
+                            <button type="submit" class="btn">
+                                <span class="material-symbols-outlined">delete</span>
+                            </button>
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p style="margin-left: 16px;">No tasks available yet.</p>
+        {% endif %}
+    </div>
+    <div class="crud-btn">
+        <button><a href="{{ url_for('auth.add') }}">Add Task</a></button>
+        <button><a href="{{ url_for('auth.logout') }}">Logout</a></button>
+    </div>
+</div>
+{% endblock %}
