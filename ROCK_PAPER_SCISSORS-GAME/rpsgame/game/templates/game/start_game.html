@@ -1,0 +1,14 @@
+<!-- game/templates/game/start_game.html -->
+
+{% extends 'base.html' %}
+
+{% block page_content %}
+    <div class=" container text-center p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+        <h2>Choice a username</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-outline-dark">Start game</button>
+        </form>
+    </div>
+{% endblock page_content %}

@@ -1,0 +1,14 @@
+<!-- game/templates/game/game_result.html -->
+
+{% extends 'base.html' %}
+
+{% block page_content %}
+    <div class="container text-center p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+        <h2>Round history</h2>
+        <p>{{ username }}'s choice: {{ player_choice }}</p>
+        <p>Computer's choice: {{ computer_choice }}</p>
+        <p>Result: {{ result }}</p>
+        <a href="{% url 'play_game' %}" class="btn btn-outline-dark text-decoration-none">Play Again</a>
+        <a href="{% url 'end_game' %}" class="btn btn-outline-dark text-decoration-none">End Game</a>
+    </div>
+{% endblock page_content %}

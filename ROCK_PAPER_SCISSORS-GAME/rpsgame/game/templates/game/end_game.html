@@ -1,0 +1,15 @@
+<!-- game/templates/game/end_game.html -->
+
+{% extends 'base.html' %}
+
+{% block page_content %}
+<div class="container text-center p-3 text-primary-emphasis bg-primary-subtle border-5 border-primary-subtle rounded-3">
+    <h2>Game History</h2>
+    <ul class="list-unstyled">
+        {% for game in games %}
+            <li>{{ game.timestamp }}: {{ game.player_choice }} vs {{ game.computer_choice }} - {{ game.result }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'start_game' %}" class="btn btn-outline-dark text-decoration-none">Start New Game</a>
+</div>
+{% endblock page_content %}
