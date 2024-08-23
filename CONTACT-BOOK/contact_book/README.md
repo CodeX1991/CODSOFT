@@ -34,7 +34,7 @@ business associates, by providing a seamless experience to access and manage con
    python manage.py migrate
    python manage.py runserver
 6. **Preview in browser**
-   Navigate to http://localhost:3000 to view the app.
+   Navigate to http://localhost:8000 to view the app.
    ```bash
    http://localhost:8000
 ## Usage
