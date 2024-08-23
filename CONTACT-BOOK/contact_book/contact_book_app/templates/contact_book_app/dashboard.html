@@ -1,0 +1,51 @@
+<!-- contact_book_app/dashboard.html -->
+
+{% extends 'base.html' %}
+
+{% block page_content %}
+<div class="container-sm my-5 w-auto text-center bg-light border border-secondary border-0.5 rounded pt-2">
+    <h4>{{ user.username }}'s Contacts</h4>
+
+    <!-- Forrm search section -->
+    <form method="GET" action="{% url 'dashboard' %}" class="d-flex justify-content-center mb-3">
+        <input type="text" name="q" placeholder="Search contacts by name or phone..." value="{{ query|default:'' }}" class="form-control w-50" />
+        <button type="submit" class="btn btn-outline-dark text-decoration-none ms-2">Search</button>
+    </form>
+
+    <a href="{% url 'add_contact' %}" class="link-dark-emphasis text-decoration-none link-underline-hover">Add New Contact</a> |
+    <a href="{% url 'logout' %}" class="link-dark-emphasis text-decoration-none link-underline-hover">Logout</a>
+    {% if contacts %}
+
+    <!-- Table for display -->
+    <table class="table table-secondary mt-2">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Address</th>
+                <th scope="col">Actions</th>
+              </tr>
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+            <tr>
+                <th scope="row"></th>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.phone_number }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.address }}</td>
+                <td colspan="2">
+                    <a href="{% url 'update_contact' contact.id %}" class="link-dark-emphasis text-decoration-none">Update</a> | 
+                    <a href="{% url 'delete_contact' contact.id %}" class="link-dark-emphasis text-decoration-none">Delete</a>
+                </td>
+              </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <P>You have no contact yet</P>
+    {% endif %}
+</div>
+{% endblock %}

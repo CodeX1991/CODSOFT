@@ -1,0 +1,31 @@
+<!-- contact_book_app/login.html -->
+
+{% extends 'base.html' %}
+
+{% block page_content %}
+<div class="container-sm my-5 w-25 text-center bg-light border border-secondary border-0.5 rounded pt-2">
+    <h5 class="text-center">Login</h5>
+    <form method="post">
+        {% csrf_token %}
+        
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+            <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+        
+        <div class="mb-3">
+            {{ form.username.label }}<br>
+            {{ form.username }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.password.label }}<br>
+            {{ form.password }}
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark mb-4 me-2">Login</button>
+        <a href="{% url 'home' %}" class="btn btn-outline-dark text-decoration-none mb-4">Cancel</a>
+    </form>
+</div>
+{% endblock %}

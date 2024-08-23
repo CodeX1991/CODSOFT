@@ -1,0 +1,14 @@
+<!-- contact_book_app/home.html -->
+
+{% extends "base.html" %}
+
+{% block page_content %}
+<<div class="container-sm my-5 w-25 text-center bg-light border border-secondary border-0.5 rounded pt-2">
+    <h4><u>Contact book App</u></h4>
+    <P>We help to keep your contact organized.</P>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center mb-4">
+      <a href="{% url 'register' %}" class="btn btn-outline-dark text-decoration-none">Create Account</a>
+      <a href="{% url 'login' %}" class="btn btn-outline-dark text-decoration-none">Login</a>
+    </div>
+  </div>
+{% endblock page_content %}
