@@ -29,11 +29,11 @@ business associates, by providing a seamless experience to access and manage con
    ```bash
    pip install -r requirements.txt
 5. **Start the application**
-   ``bash
+   ```bash
    python manage.py makemigrations
    python manage.py migrate
    python manage.py runserver
-6. **Preview in browser**
+6. **Preview in browser:**
    Navigate to http://localhost:8000 to view the app.
    ```bash
    http://localhost:8000
@@ -80,6 +80,6 @@ business associates, by providing a seamless experience to access and manage con
 
 ## Acknowledgments
 - [Get Started with Django - Real Python](https://realpython.com/get-started-with-django-1/)
-- [Django Setup - Digital Ocean]([https://tailwindcss.com/](https://www.digitalocean.com/community/tutorials/how-to-install-django-and-set-up-a-development-environment-on-ubuntu-20-04))
+- [Django Setup - Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-django-and-set-up-a-development-environment-on-ubuntu-20-04)
 - [Boostrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - Special thanks to [Codsoft](https://www.codsoft.in/) for the opportunity.
