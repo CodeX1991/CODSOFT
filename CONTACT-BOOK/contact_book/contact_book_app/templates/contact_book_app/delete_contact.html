@@ -1,0 +1,14 @@
+<!-- contact_book_app/delete_contact.html -->
+
+{% extends 'base.html' %}
+
+{% block page_content %}
+<div class="container-sm my-5 w-25 text-center bg-light border border-secondary border-0.5 rounded pt-2 pb-4">
+    <h5 >Are you sure you want to delete {{ contact.name }}?</h5>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-outline-dark text-decoration-none me-2 mt-2">Delete</button>
+        <a href="{% url 'dashboard' %}" class="btn btn-outline-dark text-decoration-none mt-2">Cancel</a>
+    </form>
+</div>
+{% endblock %}

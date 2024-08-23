@@ -1,0 +1,36 @@
+<!-- add_contact.html -->
+ 
+{% extends 'base.html' %}
+
+{% block page_content %}
+<div class="container-sm my-5 w-auto text-center bg-light border border-secondary border-0.5 rounded pt-2">
+    <h4>Update Contact</h4>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+        <div class="mb-3">
+            {{ form.name.label}}<br>
+            {{ form.name }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.email.label }}<br>
+            {{ form.email }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.phone_number.label }}<br>
+            {{ form.phone_number }}
+        </div>
+
+        <div class="mb-3">
+            {{ form.address.label }}<br>
+            {{ form.address }}
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark mb-4 me-2">Update Contact</button>
+        <a href="{% url 'dashboard' %}" class="btn btn-outline-dark text-decoration-none mb-4">Cancel</a>
+    </form>
+</div>
+{% endblock %}

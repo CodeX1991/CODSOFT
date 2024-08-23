@@ -1,0 +1,77 @@
+<!-- game/templates/contact_book_app/create_account.html -->
+
+{% extends 'base.html' %}
+
+{% block page_content %}
+<div class="container-sm my-5 w-auto text-center bg-light border border-secondary border-0.5 rounded pt-2">
+    <h4 class="text-center">Create Account</h4>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+        <div class="mb-3">
+            {{ form.username.label}}<br>
+            {{ form.username }}
+            {% for error in form.username.errors %}
+            <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="mb-3">
+            {{ form.email.label }}<br>
+            {{ form.email }}
+            {% for error in form.email.errors %}
+            <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="mb-3 position-relative">
+            {{ form.password1.label }}<br>
+            {{ form.password1 }}
+            <button type="button" class="btn position-absolute top-50 btn-sm translate-middle-y show-btn" onclick="togglePassword('id_password1')">
+                Show
+            </button>
+            {% for error in form.password1.errors %}
+            <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+        <div class="mb-3 position-relative">
+            {{ form.password2.label }}<br>
+            {{ form.password2 }}
+            <button type="button" class="btn position-absolute top-50 btn-sm translate-middle-y show-btn" onclick="togglePassword('id_password2')">
+                Show
+            </button>
+            {% for error in form.password2.errors %}
+            <div class="text-danger">{{ error }}</div>
+            {% endfor %}
+        </div>
+
+        <button type="submit" class="btn btn-outline-dark mb-4 me-2">Register</button>
+        <a href="{% url 'home' %}" class="btn btn-outline-dark text-decoration-none mb-4">Cancel</a>
+    </form>
+</div>
+
+<!-- External Styling -->
+<style>
+    .show-btn {
+        margin-top: 6px;
+    }
+</style>
+
+<!--- External Script -->
+<script>
+    function togglePassword(fieldId) {
+        var field = document.getElementById(fieldId);
+        var btn = field.nextElementSibling;
+        if (field.type === "password") {
+            field.type = "text";
+            btn.innerText = "Hide";
+        } else {
+            field.type = "password";
+            btn.innerText = "Show";
+        }
+    }
+</script>
+{% endblock %}
+
