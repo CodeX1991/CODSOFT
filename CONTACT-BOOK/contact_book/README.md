@@ -11,7 +11,6 @@ business associates, by providing a seamless experience to access and manage con
 - Create user account and login
 - Add, update, and delete contacts
 - Search and filter contacts by name, or phone number
-- Import and export contacts in CSV format
 - Secure authentication and authorization
 
 ## Installation
