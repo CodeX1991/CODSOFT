@@ -59,7 +59,7 @@ business associates, by providing a seamless experience to access and manage con
 ![Add Contact](https://github.com/CodeX1991/CODSOFT/blob/main/CONTACT-BOOK/contact_book/Imges/Add_Contact.png)
 
 ## Technologies Used
- **Frontend:**
+- **Frontend:**
   - Boostrap 5
   - HTML
   - JavaScript
