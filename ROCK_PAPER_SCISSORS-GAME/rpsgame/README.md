@@ -56,7 +56,7 @@ then make its choice. The algorithm decides the winner.
 ![History round Played](https://github.com/CodeX1991/CODSOFT/blob/main/ROCK_PAPER_SCISSORS-GAME/rpsgame/Images/rps-game-result.png)
 
 ## Technologies Used
- **Frontend:**
+- **Frontend:**
   - Boostrap 5
   - HTML
 - **Backend:**
