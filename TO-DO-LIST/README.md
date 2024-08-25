@@ -40,7 +40,6 @@ by providing a seamless experience to create, access and manage todo list anytim
 - **Editing a Task:** Click on the 'Update Task' icon next to the task you wish to modify
 - **Deleting a Task:** Click on the 'Delete Task' icon next to the task you want to remove.
 - **Logout:** Click on the 'Logout' button to logout
-- 
 ## Screenshots
 
 ### User Dashboard
@@ -56,7 +55,7 @@ by providing a seamless experience to create, access and manage todo list anytim
 ![Sign In](https://github.com/CodeX1991/CODSOFT/blob/main/TO-DO-LIST/images/todo_list_login.png)
 
 ## Technologies Used
- **Frontend:**
+- **Frontend:**
   - HTML
   - CSS
   - JavaScript
