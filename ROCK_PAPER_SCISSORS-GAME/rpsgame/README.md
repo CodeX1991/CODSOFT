@@ -40,7 +40,6 @@ then make its choice. The algorithm decides the winner.
 - **Make a Choice:** click on 'Either Rock, Paper or Scissor' button to play the game
 - **Play Again or End Game:** Click on the 'Play Again or End Game' button to either play again or end the game
 - **Start New Game:** Click on the 'Start New Game' to start another round if you wish to play again
-- 
 ## Screenshots
 
 ### Choose a username
