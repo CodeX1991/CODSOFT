@@ -35,33 +35,33 @@ by providing a seamless experience to create, access and manage todo list anytim
    http://127.0.0.1:5000
 ## Usage
 - **Create User Account:** Click on the 'Create Account' button and fill in the necessary details to create a user account.
-- **Login:** You are redirected to login page, click on 'Login' button to have access to your dashboard
+- **Login:** You are redirected to Sign page, click on 'Sign In' button to have access to your dashboard
 - **Adding a Task:** Click on the 'Add Task' button and fill in your task.
 - **Editing a Task:** Click on the 'Update Task' icon next to the task you wish to modify
 - **Deleting a Task:** Click on the 'Delete Task' icon next to the task you want to remove.
+- **Logout:** Click on the 'Logout' button to logout
 - 
 ## Screenshots
 
-### Home Page
-![Home page](https://github.com/CodeX1991/CODSOFT/blob/main/CONTACT-BOOK/contact_book/Imges/home.png)
+### User Dashboard
+![User Dashboard](https://github.com/CodeX1991/CODSOFT/blob/main/TO-DO-LIST/images/todo_list_dashboard.png)
 
 ### Create Account
-![Create Account](https://github.com/CodeX1991/CODSOFT/blob/main/CONTACT-BOOK/contact_book/Imges/create_account.png)
+![Create Account](https://github.com/CodeX1991/CODSOFT/blob/main/TO-DO-LIST/images/todo_list_register.png)
 
-### User Dashboard
-![User Dashboard](https://github.com/CodeX1991/CODSOFT/blob/main/CONTACT-BOOK/contact_book/Imges/dashboard.png)
+### Add Task
+![Add Task](https://github.com/CodeX1991/CODSOFT/blob/main/TO-DO-LIST/images/todo_list_add_task.png)
 
-### Add Contact
-![Add Contact](https://github.com/CodeX1991/CODSOFT/blob/main/CONTACT-BOOK/contact_book/Imges/Add_Contact.png)
+### Sign In
+![Sign In](https://github.com/CodeX1991/CODSOFT/blob/main/TO-DO-LIST/images/todo_list_login.png)
 
 ## Technologies Used
  **Frontend:**
-  - Boostrap 5
   - HTML
-  - JavaScript
   - CSS
+  - JavaScript
 - **Backend:**
-  - Django
+  - Flask
 - **Database:**
   - SQLiteDB
 - **Version Control:**
@@ -74,7 +74,7 @@ by providing a seamless experience to create, access and manage todo list anytim
 - **GitHub:** [CodeX1991](https://github.com/CodeX1991)
 
 ## Acknowledgments
-- [Get Started with Django - Real Python](https://realpython.com/get-started-with-django-1/)
-- [Django Setup - Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-django-and-set-up-a-development-environment-on-ubuntu-20-04)
-- [Boostrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+- [Flask Web Project - Real Python](https://realpython.com/flask-project/)
+- [Flask Setup - Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-create-your-first-web-application-using-flask-and-python-3)
+- [Flask Documnentation](https://flask.palletsprojects.com/en/3.0.x/)
 - Special thanks to [Codsoft](https://www.codsoft.in/) for the opportunity.
