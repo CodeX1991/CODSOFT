@@ -4,7 +4,7 @@ The PASSWORD GENERATOR App is a simple and intuitive application designed to gen
 This app helps users to generate safe and secure password, thereby saving them the stress of thinking of a secure
 password. It is easy to use.
 ## Demo
-[Live Demo](https://youtu.be/LXI5H_djPAs)
+[Live Demo](https://youtube.com/shorts/Ec8YB-wCAXw)
 
 ## Features
 - Generate strong and secure password
